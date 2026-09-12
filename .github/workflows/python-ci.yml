@@ -1,9 +1,13 @@
 name: Python CI
-
+#trigger based on push on main branch and pull requests
 on:
   push:
+    branches:
+      - main
   pull_request:
-
+    branches:
+      - main
+  
 jobs:
   test:
     runs-on: ubuntu-latest
